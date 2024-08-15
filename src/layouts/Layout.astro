@@ -15,7 +15,13 @@ const { title, description } = Astro.props;
 		<meta name="viewport" content="width=device-width" />
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="generator" content={Astro.generator} />
-		<title>{title}</title>
+		<meta property="og:title" content="LF Transfer, tenha um carro exclusivo a sua espera." />
+		<meta
+		property="og:description"
+		content="Transfer privativo para os principais destinos de Porto Seguro: Trancoso, Arraial d'Ajuda, Club Med, Caraíva, entre outros destinos."
+	/>
+	<meta property="og:image" content="https://i.imgur.com/V19cWKl.jpeg" />
+	<meta property="og:url" content="https://gpstransfer.com.br" />		<title>{title}</title>
 	</head>
 	<body>
 		<slot />
