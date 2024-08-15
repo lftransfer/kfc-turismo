@@ -10,24 +10,29 @@ const { title, description } = Astro.props;
 <!doctype html>
 <html lang="pt-br">
 	<head>
-		<!-- This is opening of <body> -->
-<!-- Google Tag Manager (noscript) -->
-<noscript>
-  <iframe
-    src="https://www.googletagmanager.com/ns.html?id=GTM-MCHJ97D2"
-    height="0"
-    width="0"
-    style="display:none;visibility:hidden"
-  >
-  </iframe>
-</noscript>
-<!-- End Google Tag Manager (noscript) -->
+		<!-- This is in <head> -->
+<!-- Google Tag Manager -->
+<script is:inline>
+  (function (w, d, s, l, i) {
+    console.log("GTM");
+    w[l] = w[l] || [];
+    w[l].push({ "gtm.start": new Date().getTime(), event: "gtm.js" });
+    var f = d.getElementsByTagName(s)[0],
+      j = d.createElement(s),
+      dl = l != "dataLayer" ? "&l=" + l : "";
+    j.async = true;
+    j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+    f.parentNode.insertBefore(j, f);
+  })(window, document, "script", "dataLayer", "GTM-MCHJ97D2");
+</script>
+<!-- End Google Tag Manager -->
 <script is:inline>
   window.dataLayer = window.dataLayer || [];
   function gtag() {
     dataLayer.push(arguments);
   }
 </script>
+
 		<meta charset="UTF-8" />
 		<meta name="description" content={description} />
 		<meta name="viewport" content="width=device-width" />
@@ -42,6 +47,19 @@ const { title, description } = Astro.props;
 	<meta property="og:url" content="https://lftransfer.com.br/" />		<title>{title}</title>
 	</head>
 	<body>
+		<!-- This is opening of <body> -->
+<!-- Google Tag Manager (noscript) -->
+<noscript>
+  <iframe
+    src="https://www.googletagmanager.com/ns.html?id=GTM-MCHJ97D2"
+    height="0"
+    width="0"
+    style="display:none;visibility:hidden"
+  >
+  </iframe>
+</noscript>
+<!-- End Google Tag Manager (noscript) -->
+
 		<slot />
 	</body>
 </html>
