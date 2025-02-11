@@ -1,13 +1,6 @@
 import { useState, useEffect } from "react";
 
-const images = [
-  "./img06.jpg",
-  "./img02.jpg",
-  "./img04.jpg",
-  "./img01.jpg",
-  "./img03.jpg",
-  "./img05.jpg",
-];
+const images = ["./img06.jpg", "./img04.jpg", "./img01.jpg", "./img05.jpg"];
 
 export default function ImgHeader() {
   const [index, setIndex] = useState(0);
